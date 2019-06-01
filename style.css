@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.outbox{
+    overflow: hidden;
+}
+.outbox>div{
+    width: 150px;
+    height: 150px;
+    float: left;
+    overflow: hidden;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    position: relative;
+    box-sizing: border-box;
+}
+/*水平垂直居中*/
+.outbox>div>img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.outbox >div> .text{
+    position:absolute;
+    bottom: 0px;
+    width:380px ;
+    color: #ffffff;
+    transform: translateY(100%);/*自身的100%就是移出了div*/
+    background: rgba(250,250,250,.3);
+    opacity: 0;
+}
+.outbox >div.active .text{
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all .8s;
+}
